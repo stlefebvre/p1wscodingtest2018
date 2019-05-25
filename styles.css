@@ -1,14 +1,26 @@
-/* font-family: 'Open Sans', sans-serif; */
-
-nav {
-    background: gray;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-i {
+nav {
+    background: #404345;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.nav-link {
     color: #FFFFFF;
 }
 
 .brand-header {
     background: blue;
     color: #FFFFFF;
+}
+
+@media (min-width: 500px) {
+    .navbar-brand {
+        display: unset;
+    }
 }
