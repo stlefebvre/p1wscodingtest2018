@@ -1,6 +1,6 @@
 /* OVERLAY COLORS */
 
-Request-btns {
+/* Request-btns {
     blue: #85ADD6;
     black: #858585;
 } 
@@ -8,7 +8,7 @@ Request-btns {
 Header-wave-overlays {
     blue: #7893AE;
     black: #666666;
-}
+} */
 
 /*END OVERLAY COLORS*/
 
@@ -38,9 +38,46 @@ nav {
     color: #FFFFFF;
 }
 
-.brand-header {
-    background: blue;
+.header-logo {
+    position: relative;
+    top: -500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-header h2 {
+    position: relative;
+    top: -400px;
     color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.brand-header h3 {
+    position: relative;
+    top: -400px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+}
+
+.CTA {
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.brand-header a {
+    position: relative;
+    top: -300px;
+    text-align: center;
 }
 
 footer {
@@ -55,5 +92,6 @@ footer {
 @media (min-width: 500px) {
     .navbar-brand {
         display: unset;
+        color: #FFFFFF;
     }
 }
