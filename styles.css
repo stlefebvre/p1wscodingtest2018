@@ -18,29 +18,57 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     margin-bottom: 60px;
+    font-family: proxima-nova, sans-serif;
 }
 
 nav {
-    background: #404345;
+    background: #333333;
 }
 
-.navbar {
-    justify-content: unset; /*overrides bootstrap justify-content style */
+h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+}
+
+p {
+    padding: 20px 20px 0px 20px;
 }
 
 .navbar-brand {
-    display: none;
+    display: flex;
+    color: transparent;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
 }
 
 .nav-link {
     color: #FFFFFF;
+    padding-right: 0px; /*overrides bootstrap's nav-link padding*/
+}
+
+.nav-link:hover {
+    color: #FEFF99;
+}
+
+.brand-header {
+    height: 539.72px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.desktop-header, .logo-wrapper, .logo-link.wrapper, .logo-link {
+    display: none;
 }
 
 .header-logo {
     position: relative;
-    top: -500px;
+    top: -520px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -52,46 +80,211 @@ nav {
     color: #FFFFFF;
     font-weight: 700;
     text-align: center;
-    letter-spacing: 2px;
-    font-size: 40px;
+    font-size: 34px;
     margin: 0px;
 }
 
 .brand-header h3 {
     position: relative;
-    top: -400px;
+    top: -410px;
     color: #FFFFFF;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .CTA {
+    text-transform: uppercase;
     color: #FFFFFF;
     border: 3px solid #FFFFFF;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.brand-header .CTA:hover {
+    color: #FEFF99;
+    border-color: #FEFF99;
+    text-decoration: none;
 }
 
 .brand-header a {
     position: relative;
     top: -300px;
-    text-align: center;
+    display: inline-block
 }
 
-footer {
+.product-img {
+    height: 300px;
+    width: 300px;
+    opacity: 0.3;
+}
+
+.card-row {
+    padding: 0px 20px;
+}
+
+.product-card {
+    /* background: #47484A; */
+    background: #333333;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    padding: 0px;
+    margin: 0px 0px 20px 0px;
+}
+
+.product-card:hover {
+    background: #7893AE;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 110px);
+}
+
+.product-overlay-h3 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    line-height: 0.8;
+}
+
+.request-row {
+    margin-left: auto;
+    margin-right: auto;
+}
+.request-btn {
+    background: #333333;
+    display: inline-block;
+    height: 150px;
+    width: 300px;
+    padding: 0px;
+}
+
+#ctlg-btn {
+    background: #7893AE;
+    margin-top: 10px;
+}
+
+.request-img {
+    height: 150px;
+    width: 300px;
+    opacity: 0.3;
+}
+
+.request-overlay {
+    position: absolute;
+    bottom: 7%;
+    margin-left: 70px;
+    margin-right: auto;
+}
+
+.request-overlay a {
+    color: #FFFFFF;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+
+/* footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 60px;
     line-height: 60px;
     background-color: #f5f5f5;
+} */
+
+footer {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #FEFF99;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-@media (min-width: 500px) {
+.footer-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-icon, .hamburger-menu {
+    color: #000000;
+}
+
+.dropup {
+    position: relative;
+    display: inline-block;
+}
+
+.dropup:hover .dropup-links,
+.dropup:active .dropup-links,
+.dropup:focus .dropup-links {
+    display: block;
+}
+
+.dropup-links {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: #333333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropup-links a {
+    color: #FFFFFF;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+@media (min-width: 395px) {
     .navbar-brand {
-        display: unset;
         color: #FFFFFF;
+    }
+
+    .brand-header {
+        height: 700px;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .desktop-header {
+        display: unset;
+    }
+}
+
+@media (min-width: 700px) {
+    .card-row {
+        margin-left: 40px;
     }
 }
